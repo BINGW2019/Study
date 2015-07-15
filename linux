@@ -12,3 +12,6 @@ i686表示32位机器
 getconf LONG_BIT
 在32位和64位机器上运行如下命令，结果如下：
 [b@002 ~]$ getconf LONG_BIT64[root@pmx4 /]# getconf LONG_BIT32
+
+
+http://zhoushijun.iteye.com/blog/1942475
