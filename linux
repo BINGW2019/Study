@@ -1,0 +1,14 @@
+查看linux是多少位的几位方法：
+查看linux机器是32位还是64位的方法：方法一：file /sbin/init 或者 file /bin/ls结果如下：/sbin/init: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped
+如果显示 64-bit 则为64位；
+file /sbin/init
+/sbin/init:
+ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), for GNU/Linux
+2.2.5, dynamically linked (uses shared libs), stripped
+如果显示为32 bit 则为32bit；方法二：uname -a:uname -aLinux pmx002**.**.** 2.6.32-71.el6.x86_64 #1 SMP Wed Sep 1 01:33:01 EDT 2010 x86_64 x86_64 x86_64 GNU/Linux
+x86_64表示64位机器uname -aLinux pmx0**.**.** 2.6.9-5.ELsmp #1 SMP Wed Jan 5 19:30:39 EST 2005 i686 i686 i386 GNU/Linux
+i686表示32位机器
+方法三：也是看linux是32位还是64位最简单的方法：
+getconf LONG_BIT
+在32位和64位机器上运行如下命令，结果如下：
+[b@002 ~]$ getconf LONG_BIT64[root@pmx4 /]# getconf LONG_BIT32
